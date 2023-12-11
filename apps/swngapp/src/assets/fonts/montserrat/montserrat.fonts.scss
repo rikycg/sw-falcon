@@ -1,0 +1,48 @@
+/* Fonts */
+@font-face {
+  font-family: 'MontserratLight';
+  src: url('./montserrat-light-webfont.woff2') format('woff2'),
+    url('./montserrat-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MontserratRegular';
+  src: url('./montserrat-regular-webfont.woff2') format('woff2'),
+    url('./montserrat-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MontserratMedium';
+  src: url('./montserrat-medium-webfont.woff2') format('woff2'),
+    url('./montserrat-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MontserratBold';
+  src: url('./montserrat-bold-webfont.woff2') format('woff2'),
+    url('./montserrat-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MontserratSemiBold';
+  src: url('./montserrat-semibold-webfont.woff2') format('woff2'),
+    url('./montserrat-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --sw-font-montserrat-light: 'MontserratLight';
+  --sw-font-montserrat-regular: 'MontserratRegular';
+  --sw-font-montserrat-medium: 'MontserratMedium';
+  --sw-font-montserrat-bold: 'MontserratBold';
+  --sw-font-montserrat-semibold: 'MontserratSemiBold';
+}

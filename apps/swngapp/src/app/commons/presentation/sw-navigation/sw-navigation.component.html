@@ -1,0 +1,40 @@
+<div class="navigation">
+  
+  <div class="navigation__topic" *ngIf="!isSearching"  (click)="onOpenMenu()">
+    <h1>{{ title }}</h1>
+    <ion-icon name="caret-down-outline"></ion-icon>
+  </div>
+
+  <div class="navigation__controls">
+    <span *ngIf="isOnDetailsPage" (click)="onBack()" class="back">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </span>
+    
+    <span *ngIf="!isSearching && !isOnDetailsPage" (click)="onActivateSearch(true)">
+      <ion-icon name="search-outline" />
+    </span>
+    
+    <div class="search-container" [class.searching]="isSearching">
+      <ion-searchbar 
+        mode="md" 
+        (ionClear)="onSearchCleared()"
+        (ionChange)="onSearch()"
+        [(ngModel)]="searchValue"
+      />
+      <ion-button 
+        mode="md" 
+        (click)="onSearch()">
+        Search
+      </ion-button>
+    </div>
+
+    <ng-container *ngIf="!isOnDetailsPage && !isSearching">
+      <span [class.disabled]="prevDisabled()" (click)="onPrev()">
+        <ion-icon name="chevron-back-outline" />
+      </span>
+      <span [class.disabled]="nextDisabled()" (click)="onNext()">
+        <ion-icon name="chevron-forward-outline" />
+      </span>
+    </ng-container>
+  </div>
+</div>

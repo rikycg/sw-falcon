@@ -1,0 +1,13 @@
+:root {
+  --sw-color-primary: #ffb700;
+
+  --sw-color-dark: #000000;
+  --sw-color-dark-rgb: 0, 0, 0;
+  --sw-color-dark-tint: #202020;
+
+  --sw-color-light: #ffffff;
+
+  /* Ionic */
+  --ion-color-primary: var(--sw-color-primary);
+}
+

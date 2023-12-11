@@ -1,0 +1,69 @@
+@import '../../../../assets/scss/breakpoints.scss';
+
+:host {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  
+  .topic-information {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+
+    &__list {
+      background-image: linear-gradient(to bottom, transparent, black);
+      padding: 20px;
+      color: var(--sw-color-light);
+      min-width: 200px;
+      margin-left: 20px;
+      height: 100%;
+      color: var(--sw-color-light);
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    
+      li {
+        list-style: none;
+        
+        label {
+          font-family: var(--sw-font-montserrat-semibold);
+        }
+    
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @include for-screen-s {
+    .topic-information {
+      flex-direction: column;
+      height: 100%;
+      padding: 0;
+
+      &__list {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+      }
+
+      picture {
+        width: 100%;
+        height: 100%;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

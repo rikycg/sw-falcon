@@ -1,0 +1,23 @@
+h1, h2, h3 {
+  margin: 0;
+}
+
+h1 {
+  font-family: var(--sw-font-montserrat-bold);
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-family: var(--sw-font-montserrat-semibold);
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-family: var(--sw-font-montserrat-semibold);
+  font-size: 1rem
+}
+
+p {
+  font-family: var(--sw-font-montserrat-regular);
+  font-size: 1rem;
+}

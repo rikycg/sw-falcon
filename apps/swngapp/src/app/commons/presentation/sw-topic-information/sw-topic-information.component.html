@@ -1,0 +1,11 @@
+<div class="topic-information">
+  <picture>
+    <img [src]="imageUrl" (error)="onImageError($event)">
+  </picture>
+  <div class="topic-information__list">
+    <li *ngFor="let item of list">
+      <label>{{ item.key }}</label>
+      <p>{{ item.value }}</p>
+    </li>
+  </div>
+</div>

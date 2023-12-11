@@ -1,0 +1,30 @@
+@import '../../../../../assets/scss/breakpoints.scss';
+
+:host {
+  margin-left: 180px;
+  padding-top: 90px;
+  
+  ion-content {
+    --background: transparent;
+    --padding-end: 20px;
+    --padding-start: 20px;
+    --padding-bottom: 20px;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  @include for-screen-s {
+    margin-left: 0;
+
+    .group {
+      justify-content: center;
+    }
+  }
+}

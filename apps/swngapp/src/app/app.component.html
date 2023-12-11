@@ -1,0 +1,14 @@
+<ion-content [scrollX]="false" [scrollY]="false">
+  <aside [class.opened]="isSidebarOpened()">
+    <sw-menu />
+  </aside>
+  <ion-router-outlet></ion-router-outlet>
+</ion-content>
+<ion-footer>
+  Exercise by <a href="https://rikycg.com" target="_blank" rel="noopener noreferrer">Rikycg</a>
+  <span class="repo">
+    <a href="https://github.com/rikycg/sw-falcon" target="_blank" rel="noopener noreferrer">
+      <ion-icon name="logo-github"></ion-icon>
+    </a>
+  </span>
+</ion-footer>

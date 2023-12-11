@@ -1,0 +1,55 @@
+@import '../../../../assets/scss/breakpoints.scss';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  height: 100%;
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    span {
+      color: white;
+      display: none;
+      font-size: 1.75rem;
+    }
+
+    img {
+      width: 100px;
+    }
+  }
+
+  nav {
+    color: white;
+    font-family: var(--sw-font-montserrat-regular);
+    list-style: none;
+    margin-top: auto;
+
+    li {
+      cursor: pointer;
+      padding: 5px 10px;
+
+      &.active {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid white;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  @include for-screen-s {
+    background-color: var(--sw-color-dark-tint);
+
+    .header {
+      span {
+        display: flex;
+      }
+    }
+  }
+}

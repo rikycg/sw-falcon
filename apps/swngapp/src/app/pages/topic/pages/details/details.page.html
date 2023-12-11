@@ -1,0 +1,5 @@
+<ion-content>
+  <ng-container *ngIf="!!item">
+    <ng-container *ngComponentOutlet="item.component; inputs: item.data;" />
+  </ng-container>
+</ion-content>

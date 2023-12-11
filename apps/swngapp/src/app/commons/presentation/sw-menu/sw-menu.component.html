@@ -1,0 +1,39 @@
+<div class="header">
+  <img src="assets/images/common/swlogo.png" alt="Star Wars" />
+  <span (click)="onCloseMenu()">
+    <ion-icon name="close-outline"></ion-icon>
+  </span>
+</div>
+
+<nav>
+  <li
+    [routerLinkActive]="['active']" 
+    [routerLink]="['/films']">
+    Movies
+  </li>
+  <li 
+    [routerLinkActive]="['active']" 
+    [routerLink]="['/people']">
+    Characters
+  </li>
+  <li 
+    [routerLinkActive]="['active']" 
+    [routerLink]="['/planets']">
+    Planets
+  </li>
+  <li 
+    [routerLinkActive]="['active']" 
+    [routerLink]="['/vehicles']">
+    Vehicles
+  </li>
+  <li 
+    [routerLinkActive]="['active']" 
+    [routerLink]="['/starships']">
+    Starships
+  </li>
+  <li 
+    [routerLinkActive]="['active']" 
+    [routerLink]="['/species']">
+    Species
+  </li>
+</nav>

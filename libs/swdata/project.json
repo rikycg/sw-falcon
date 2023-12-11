@@ -1,0 +1,26 @@
+{
+  "name": "swdata",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/swdata/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/swdata",
+        "main": "libs/swdata/src/index.ts",
+        "tsConfig": "libs/swdata/tsconfig.lib.json",
+        "assets": ["libs/swdata/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/swdata/**/*.ts", "libs/swdata/package.json"]
+      }
+    }
+  },
+  "tags": []
+}

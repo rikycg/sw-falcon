@@ -1,0 +1,6 @@
+<article [routerLink]="['/', topic, id, 'details']">
+  <picture>
+    <img [src]="imageUrl" [alt]="name" (error)="onImageError($event)"/>
+  </picture>
+  <h3>{{ name }}</h3>
+</article>

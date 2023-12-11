@@ -1,0 +1,72 @@
+@import '../../../../assets/scss/breakpoints.scss';
+
+:host {
+  width: 100%;
+
+  .navigation {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+
+    @include for-screen-s {
+      justify-content: space-between;
+    }
+
+    &__topic {
+      color: white;
+      align-items: center;
+      display: none;
+      cursor: pointer;
+
+      @include for-screen-s {
+        display: flex;
+      }
+    }
+
+    &__controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: auto;
+
+      span {
+        display: flex;
+        background-color: rgba(var(--sw-color-dark-rgb), 0.5);
+        width: 30px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+    
+        &.disabled {
+          opacity: 0.3;
+          pointer-events: none;
+        }
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+
+      .search-container {
+        align-items: center;
+        display: flex;
+        max-width: 0px;
+        overflow: hidden;
+        transition: max-width 0.3s ease-in-out;
+
+        ion-button {
+          height: 42px;
+        }
+
+        &.searching {
+          max-width: 350px;
+        }
+      }
+    }
+  }
+
+  
+}
